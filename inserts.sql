@@ -10,5 +10,6 @@ CREATE TABLE opcoes_resposta (
     id SERIAL PRIMARY KEY,
     pergunta_id INTEGER REFERENCES perguntas(id),
     descricao TEXT,
-    correta BOOLEAN
+    correta BOOLEAN,
+    UNIQUE (pergunta_id, correta)
 );
