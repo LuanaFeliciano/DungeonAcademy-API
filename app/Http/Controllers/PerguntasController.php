@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Perguntas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PerguntasController extends Controller
 {
@@ -13,12 +14,17 @@ class PerguntasController extends Controller
         return response()->json($perguntas);
     }
 
-    public function visualizarTabela() //pra visualizar na web
+    public function visualizarTabela()
     {
-        $perguntas = Perguntas::orderBy('sala')->get();
-
+        $perguntas = Perguntas::select(
+            'perguntas.*', 
+            'opcoes_resposta.descricao as resposta_descricao',
+            'opcoes_resposta.correta')
+            ->leftJoin('opcoes_resposta', 'perguntas.id', '=', 'opcoes_resposta.pergunta_id')
+            ->orderBy('perguntas.sala')
+            ->get();
+    
         return view('visualizarPerguntas', ['perguntas' => $perguntas]);
-
     }
 
     public function post(Request $request)
