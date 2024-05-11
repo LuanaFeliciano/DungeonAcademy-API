@@ -11,6 +11,7 @@
                     <th>Sala</th>
                     <th>Tema</th>
                     <th>Dificuldade</th>
+                    <th>Pontos</th>
                     <th>Descrição da Pergunta</th>
                     <th>Descrição da Resposta</th>
                     <th>É</th>
@@ -22,6 +23,7 @@
                     <td>{{ $pergunta->sala }}</td>
                     <td>{{ $pergunta->tema }}</td>
                     <td>{{ $pergunta->dificuldade }}</td>
+                    <td>{{ $pergunta->pontuacao }}</td>
                     <td>{{ $pergunta->descricao }}</td>
                     <td>{{ $pergunta->resposta_descricao ?? '-' }}</td>
 

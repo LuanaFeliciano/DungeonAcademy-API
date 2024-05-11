@@ -19,7 +19,7 @@ class Perguntas extends Model
      *
      * @var array
      */
-    protected $fillable = ['sala', 'tema', 'dificuldade', 'descricao'];
+    protected $fillable = ['sala', 'tema', 'dificuldade', 'descricao', 'pontuacao'];
 
 
     /**
