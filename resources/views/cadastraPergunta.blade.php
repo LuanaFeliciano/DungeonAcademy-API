@@ -29,6 +29,10 @@
                             <label for="descricao">Pergunta</label>
                             <textarea name="descricao" placeholder="Descrição" class="form-control"></textarea><br>
                         </div>
+                        <div class="form-group">
+                            <label for="pontuacao">Pontos</label>
+                            <input type="number" name="pontuacao" class="form-control" placeholder="Pontuação"><br>
+                        </div>
                         <div class='text-center'>
                             <button type="submit" class="btn btn-primary">Cadastrar Pergunta</button>
                         </div>

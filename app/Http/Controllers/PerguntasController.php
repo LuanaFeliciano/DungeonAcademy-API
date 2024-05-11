@@ -34,6 +34,7 @@ class PerguntasController extends Controller
             'tema' => 'required|string',
             'dificuldade' => 'required|integer',
             'descricao' => 'required|string',
+            'pontuacao' => 'required|integer',
         ]);
 
         $pergunta = Perguntas::create($request->all());
