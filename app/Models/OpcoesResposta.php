@@ -20,9 +20,9 @@ class OpcoesResposta extends Model
      *
      * @var array
      */
-    protected $fillable = ['pergunta_id', 'descricao', 'correta'];
+    protected $fillable = ['id_pergunta', 'descricao', 'correta'];
     
-    protected $foreignKey = 'pergunta_id';
+    protected $foreignKey = 'id_pergunta';
 
     /**
      * The attributes excluded from the model's JSON form.

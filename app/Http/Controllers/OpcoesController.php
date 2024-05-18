@@ -16,14 +16,14 @@ class OpcoesController extends Controller
 
     public function getByPergunta($perguntaId)
     {
-        $respostas = OpcoesResposta::where('pergunta_id','=', $perguntaId)->get();
+        $respostas = OpcoesResposta::where('id_pergunta','=', $perguntaId)->get();
         return response()->json($respostas);
     }
 
     public function post(Request $request)
     {
         $request->validate([
-            'pergunta_id' => 'required|integer|exists:perguntas,id',
+            'id_pergunta' => 'required|integer|exists:perguntas,id',
             'descricao' => 'required|string',
             'correta' => 'required|boolean',
         ]);
