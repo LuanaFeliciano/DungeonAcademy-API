@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DificuldadeController;
 use App\Http\Controllers\OpcoesController;
 use App\Http\Controllers\PerguntasController;
 use Illuminate\Http\Request;
@@ -22,7 +23,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/perguntas', [PerguntasController::class, 'get']);
 Route::post('/perguntas', [PerguntasController::class, 'post']);
+Route::get('/perguntasDados', [PerguntasController::class, 'getPerguntasDados']);
 
 Route::post('/respostas', [OpcoesController::class, 'post']);
 Route::get('/respostas', [OpcoesController::class, 'get']);
 Route::get('/respostasByPergunta/{perguntaId}', [OpcoesController::class, 'getByPergunta']);
+
+Route::post('/dificuldade', [DificuldadeController::class, 'post']);
+Route::get('/dificuldade', [DificuldadeController::class, 'get']);

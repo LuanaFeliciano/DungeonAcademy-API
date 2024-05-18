@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
 
-class Perguntas extends Model
+class Dificuldade extends Model
 {
-    protected $table = 'perguntas';
+    protected $table = 'dificuldade';
     protected $primaryKey = "id";
+    
     public $timestamps = false;
 
 
@@ -19,9 +20,7 @@ class Perguntas extends Model
      *
      * @var array
      */
-    protected $fillable = ['sala', 'tema', 'dificuldade', 'descricao'];
-
-    protected $foreignKey = 'dificuldade';
+    protected $fillable = ['dificuldade', 'pontuacao'];
 
     /**
      * The attributes excluded from the model's JSON form.

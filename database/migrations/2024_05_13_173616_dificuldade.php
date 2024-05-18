@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('dificuldade', 15);
+            $table->integer('pontuacao');
         });
     }
 
