@@ -3,6 +3,7 @@
 use App\Http\Controllers\DificuldadeController;
 use App\Http\Controllers\OpcoesController;
 use App\Http\Controllers\PerguntasController;
+use App\Http\Controllers\RankingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,5 @@ Route::get('/respostasByPergunta/{perguntaId}', [OpcoesController::class, 'getBy
 
 Route::post('/dificuldade', [DificuldadeController::class, 'post']);
 Route::get('/dificuldade', [DificuldadeController::class, 'get']);
+
+Route::post('/ranking', [RankingController::class, 'post']);
