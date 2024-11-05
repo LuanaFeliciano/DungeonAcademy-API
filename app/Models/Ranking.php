@@ -10,5 +10,5 @@ class Ranking extends Model
     use HasFactory;
     protected $table = 'ranking';
 
-    protected $fillable = ['nome', 'pontuacao'];
+    protected $fillable = ['nome', 'pontuacao', 'genero'];
 }
