@@ -34,3 +34,4 @@ Route::post('/dificuldade', [DificuldadeController::class, 'post']);
 Route::get('/dificuldade', [DificuldadeController::class, 'get']);
 
 Route::post('/ranking', [RankingController::class, 'post']);
+Route::get('/ranking', [RankingController::class, 'get']);
