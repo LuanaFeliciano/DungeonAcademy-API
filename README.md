@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://oficial.unimar.br/nucleo-de-apoio-psicopedagogico/" target="_blank">
+  <a target="_blank">
     <img src="https://github.com/user-attachments/assets/2b7df661-99e8-4c9c-bb29-8894476bb8ce" width="200" alt="DungeonAcademy Logo">
   </a>
 </p>
